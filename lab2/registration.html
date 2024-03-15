@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style2.css">
     <title>REGISTRATION FORM</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         </div>
     </center>
     
-    <center>
+<div class="forma">
     <form>
         <label for="firstname">Firstname:</label>
         <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname"><br><br>
@@ -36,10 +37,15 @@
         <br><br>
     
         Gender:
+
+        <br>
+        <br>
         <input type="radio" name="gender" value="male">
         <label for="male">Male</label>
+        <br>
         <input type="radio" name="gender" value="female">
         <label for="female">Female</label>
+        <br>
         <input type="radio" name="gender" value="other">
         <label for="other">Other</label>
     
@@ -63,6 +69,7 @@
         <br><br>
     
         Notes:
+        <br>
         <textarea rows="10" cols="50" name="notes"></textarea>
     
         <br><br>
@@ -74,6 +81,6 @@
     
         <button type="submit"><a href="homepage.html" style="color: black;">Register</a></button>
     </form>
-</center>
+</div>   
 </body>
 </html>

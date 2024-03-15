@@ -1,0 +1,28 @@
+body{
+    background-color: #85AFD4;
+    color: white;
+}
+
+h1{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+button{
+    background-color: #E47272;
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 300px;
+    height: 40px;
+}
+
+p{
+    padding-right: 270px;
+}
