@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imran Bašić Portofolio</title>
     <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="mediaquerries.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,13 +24,32 @@
         </div>
     </nav>
 
+    <nav>
+        <div class="hamburger-nav">
+          <div class="logo"><a href="#profile">Imran Bašić</a></div>
+            <div class="hamburger-menu">
+              <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+              </div>
+          </div>
+        </div>
+    </nav>
+
 
   <!--PRVI DIO-->
 
     <section id="profile">
         
         <div class="section__pic-container">
-            <img src="images/okrugla2.jpg" alt="Izvor nade">
+            <img src="images/okrugla2.jpg" alt="Imran Basic">
         </div>
         
         
