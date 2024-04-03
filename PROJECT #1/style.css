@@ -131,7 +131,6 @@ article .icon {
 
 div {
     display: block;
-    unicode-bidi: isolate;
 }
 
 .icon {
