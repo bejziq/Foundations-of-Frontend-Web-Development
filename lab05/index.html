@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>User Table</title>
+</head>
+<body>
+
+<table id="userTable">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">ID<span class="sort-icon">▲</span></th>
+            <th onclick="sortTable(1)">Name<span class="sort-icon">▲</span></th>
+            <th onclick="sortTable(2)">Country<span class="sort-icon">▲</span></th>
+            <th onclick="sortTable(3)">Email<span class="sort-icon">▲</span></th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="userRows">
+    </tbody>
+</table>
+
+<div id="myModal" style="display: none;">
+    <p>You clicked on the user: <span id="clickedUserName"></span></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
