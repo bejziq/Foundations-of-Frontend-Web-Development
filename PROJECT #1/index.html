@@ -131,7 +131,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card">
-                <img src="images/logo.jpg" alt="Project 1" class="card-img-top">
+                <img src="images/logo.jpg" alt="Project 1" class="card-img-top project-img" data-toggle="modal" data-target="#projectModal1">
                 <div class="card-body">
                   <h5 class="card-title">Project 1</h5>
                 </div>
@@ -139,7 +139,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="images/project1.png" alt="Project 2" class="card-img-top">
+                <img src="images/project1.png" alt="Project 2" class="card-img-top project-img" data-toggle="modal" data-target="#projectModal2">
                 <div class="card-body">
                   <h5 class="card-title">Project 2</h5>
                 </div>
@@ -147,15 +147,80 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="images/project-3.png" alt="Project 3" class="card-img-top">
+                <img src="images/project-3.png" alt="Project 3" class="card-img-top project-img" data-toggle="modal" data-target="#projectModal3">
                 <div class="card-body">
                   <h5 class="card-title">Project 3</h5>
                 </div>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
       </section>
+    
+<!-- Modal for Project 1 -->
+<div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/logo.jpg" alt="Project 1" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <h2>Project 1 Description</h2>
+            <p>This is the description for Project 1. It involves creating a new logo for a company and designing their branding materials.</p>
+            <a href="project1-details.html" class="btn btn-primary" target="_blank">View More</a>
+            <!-- Additional buttons specific to Project 1 can be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 2 -->
+<div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/project1.png" alt="Project 2" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <h2>Project 2 Description</h2>
+            <p>This is the description for Project 2. It involves developing a web application for managing inventory and sales.</p>
+            <a href="project2-details.html" class="btn btn-primary" target="_blank">View More</a>
+            <!-- Additional buttons specific to Project 2 can be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 3 -->
+<div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/project-3.png" alt="Project 3" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <h2>Project 3 Description</h2>
+            <p>This is the description for Project 3. It involves designing and implementing a mobile application for task management.</p>
+            <a href="project3-details.html" class="btn btn-primary" target="_blank">View More</a>
+            <!-- Additional buttons specific to Project 3 can be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     
 
       <!--CONTACT-->
@@ -240,6 +305,37 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-</body>
+      <script>
+        $(document).ready(function() {
+  $(".project-img").click(function() {
+    var projectId = $(this).data("project-id");
+    var projectTitle = $(this).siblings(".card-body").find(".card-title").text();
+    var projectDescription = getProjectDescription(projectId);
+    var projectImageSrc = $(this).attr("src");
+    var detailPageLink = "project" + projectId + ".html"; // Assuming project detail pages are named project1.html, project2.html, etc.
+
+    $("#projectTitle").text(projectTitle);
+    $("#projectDescription").text(projectDescription);
+    $("#projectImage").attr("src", projectImageSrc);
+    $("#viewMoreButton").attr("href", detailPageLink);
+
+    $("#projectModal").modal("show");
+  });
+
+  // Function to retrieve project description based on project ID
+  function getProjectDescription(projectId) {
+    var descriptions = {
+      1: "This is the description for Project 1. It involves creating a new logo for a company and designing their branding materials.",
+      2: "This is the description for Project 2. It involves developing a web application for managing inventory and sales.",
+      3: "This is the description for Project 3. It involves designing and implementing a mobile application for task management."
+    };
+    return descriptions[projectId];
+  }
+});
+      </script>
+
+    </body>
 </html>
