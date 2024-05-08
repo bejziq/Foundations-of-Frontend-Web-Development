@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IP Address Information</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $.ajax({
-        url: 'https://ipapi.co/json/',
-        dataType: 'json',
-        success: function(data){
-            var table = '<table>';
-            table += '<tr><th>Property</th><th>Value</th></tr>';
-            table += '<tr><td>IP Address</td><td>' + data.ip + '</td></tr>';
-            table += '<tr><td>City</td><td>' + data.city + '</td></tr>';
-            table += '<tr><td>Region</td><td>' + data.region + '</td></tr>';
-            table += '<tr><td>Country</td><td>' + data.country + '</td></tr>';
-            table += '<tr><td>Latitude</td><td>' + data.latitude + '</td></tr>';
-            table += '<tr><td>Longitude</td><td>' + data.longitude + '</td></tr>';
-            table +=  '<tr><td>timezone</td><td>' + data.timezone + '</td></tr>';
-            table +=  '<tr><td>utc_offset</td><td>' + data.utc_offset + '</td></tr>';
-            table +=  '<tr><td>currency</td><td>' + data.currency + '</td></tr>';
-            table +=  '<tr><td>currency_name</td><td>' + data.currency_name + '</td></tr>';
-            table +=  '<tr><td>languages</td><td>' + data.languages + '</td></tr>';
-            table +=  '<tr><td>country_area</td><td>' + data.country_area + '</td></tr>';
-            table +=  '<tr><td>asn</td><td>' + data.asn + '</td></tr>';
-            table +=  '<tr><td>org</td><td>' + data.org + '</td></tr>';
-
-            table += '</table>';    
-
-            $('#ipInfo').html(table);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My IP Information</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
-    });
-});
-</script>
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-
-<div id="ipInfo"></div>
-
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'https://ipapi.co/json/',
+                dataType: 'json',
+                success: function(data){
+                    var table = '<table>';
+                    table += '<tr><th>Property</th><th>Value</th></tr>';
+                    table += '<tr><td>IP Address</td><td>' + data.ip + '</td></tr>';
+                    table += '<tr><td>City</td><td>' + data.city + '</td></tr>';
+                    table += '<tr><td>Region</td><td>' + data.region + '</td></tr>';
+                    table += '<tr><td>Country</td><td>' + data.country + '</td></tr>';
+                    table += '<tr><td>Latitude</td><td>' + data.latitude + '</td></tr>';
+                    table += '<tr><td>Longitude</td><td>' + data.longitude + '</td></tr>';
+                    table +=  '<tr><td>timezone</td><td>' + data.timezone + '</td></tr>';
+                    table +=  '<tr><td>utc_offset</td><td>' + data.utc_offset + '</td></tr>';
+                    table +=  '<tr><td>currency</td><td>' + data.currency + '</td></tr>';
+                    table +=  '<tr><td>currency_name</td><td>' + data.currency_name + '</td></tr>';
+                    table +=  '<tr><td>languages</td><td>' + data.languages + '</td></tr>';
+                    table +=  '<tr><td>country_area</td><td>' + data.country_area + '</td></tr>';
+                    table +=  '<tr><td>asn</td><td>' + data.asn + '</td></tr>';
+                    table +=  '<tr><td>org</td><td>' + data.org + '</td></tr>';
+        
+                    table += '</table>';    
+        
+                    $('#ipInfo').html(table);
+                }
+            });
+        });
+        </script>
+        </head>
+        <body>
+        
+        <div id="ipInfo"></div>
+        
 </body>
 </html>
