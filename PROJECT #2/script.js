@@ -8,12 +8,12 @@ $(document).ready(function () {
     var projectDescription = getProjectDescription(projectId);
     var projectImageSrc = $(this).attr("src");
     var detailPageLink = "project" + projectId + ".html";
+    //var detailPageLink = "#project-" + projectID 
 
     $("#projectTitle").text(projectTitle);
     $("#projectDescription").text(projectDescription);
     $("#projectImage").attr("src", projectImageSrc);
     $("#viewMoreButton").attr("href", detailPageLink);
-
     $("#projectModal").modal("show");
   });
 
@@ -26,6 +26,7 @@ $(document).ready(function () {
     return descriptions[projectId];
   }
 });
+
 //FROM VALIDATION
 $('#myForm').validate({
   rules: {
@@ -41,12 +42,12 @@ $('#myForm').validate({
       }
   },
   messages: {
-      name: 'Please enter your name',
-      email: {
+          name: 'Please enter your name',
+          email: {
           required: 'Please enter your email',
           email: 'Please enter a valid email address'
       },
-      password: {
+          password: {
           required: 'Please enter a password',
           minlength: 'Password must be at least 8 characters long',
           maxlength: 'Password cannot be longer than 20 characters',
@@ -55,14 +56,13 @@ $('#myForm').validate({
   submitHandler: function (form) {
       try {
           $.blockUI({ message: '<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>' });
-
-          $(form)[0].reset();
-
+          toastr.success("Form submitted successfully")
+          $.unblockUI();
 
           setTimeout(function(){
-              console.log('time out')
+              toastr.success("Form submitted successfully")
               $.unblockUI();
-          }, 3000)
+          }, 3000)  
           
       } catch (error) {
           console.error('Error in submitHandler:', error);
@@ -111,6 +111,25 @@ document.getElementById("close-button").addEventListener("click", function () {
  
 
 function myFunction() {
-    console.log('from html');
     document.getElementById("table-container").style.display = "block";
   }
+
+//faq
+function toggleVisibility(sectionId) {
+  var section = document.getElementById(sectionId);
+  if (section.style.display === "none") {
+    section.style.display = "block"; 
+  } else {
+    section.style.display = "none";   
+  }
+}
+
+function changeButtonStyle(button) {
+  if (button.style.color === "white") {
+    button.style.color = "black";
+    button.style.backgroundColor = "white";
+  } else {
+    button.style.color = "white";
+    button.style.backgroundColor = "black";
+  }
+}

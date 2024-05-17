@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" type="images/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -14,7 +15,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script src=https://cdn.datatables.net/2.0.3/js/dataTables.min.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="assets/js/jquery.spapp.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="services/student-service.js"></script>
+    <script src="utils/constants.js"></script>
+    <script src="utils/utils.js"></script>
+    <script src="utils/rest-client.js"></script>
 </head>
 <body>
 
@@ -167,64 +177,64 @@
       </section>
     
 <!-- Modal for Project 1 -->
-<div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel1" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/logo.jpg" alt="Project 1" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <h2>Project 1 Description</h2>
-            <p>This is the description for Project 1. It involves creating a new logo for a company and designing their branding materials.</p>
-            <a href="project1.html" class="btn btn-primary" target="_blank">View More</a>
+      <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/logo.jpg" alt="Project 1" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                  <h2>Project 1 Description</h2>
+                  <p>This is the description for Project 1. It involves creating a new logo for a company and designing their branding materials.</p>
+                  <a href="html/project1.html" class="btn btn-primary" target="_blank">View More</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal for Project 2 -->
-<div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel2" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/project-2.png" alt="Project 2" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <h2>Project 2 Description</h2>
-            <p>This is the description for Project 2. It involves developing a web application for managing inventory and sales.</p>
-            <a href="project2.html" class="btn btn-primary" target="_blank">View More</a>
+      <!-- Modal for Project 2 -->
+      <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/project-2.png" alt="Project 2" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                  <h2>Project 2 Description</h2>
+                  <p>This is the description for Project 2. It involves developing a web application for managing inventory and sales.</p>
+                  <a href="html/project2.html" class="btn btn-primary" target="_blank">View More</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal for Project 3 -->
-<div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel3" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/project-3.png" alt="Project 3" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <h2>Project 3 Description</h2>
-            <p>This is the description for Project 3. It involves designing and implementing a mobile application for task management.</p>
-            <a href="project3.html" class="btn btn-primary" target="_blank">View More</a>
+      <!-- Modal for Project 3 -->
+      <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/project-3.png" alt="Project 3" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                  <h2>Project 3 Description</h2>
+                  <p>This is the description for Project 3. It involves designing and implementing a mobile application for task management.</p>
+                  <a href="html/project3.html" class="btn btn-primary" target="_blank">View More</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
     
@@ -277,9 +287,24 @@
       </div>
 
 
+      <main id="spapp" role="main">
+        <section id="project-1" data-load="project1.html"></section>
+        <section id="project-1" data-load="project1.html"></section>
+        <section id="project-1" data-load="project1.html"></section>
+      </main>
+
 
       <section id="client-data">
-        <button id="show-button" onclick="myFunction()">Show Client Table</button>
+        <h1 style="margin-left: 193px;">Show Client Data</h1>
+        <button id="show-button" onclick="myFunction()" 
+        style="display: block;
+        margin-left: 193px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;">Show Client Table</button>
 
           <div class="container" id="table-container" style="display: none;">
               <h1>Client Table</h1>
@@ -300,7 +325,37 @@
           </div>
       </section>
 
-      
+<!-- FAQ -->
+      <h1 style="margin-left: 193px;">Frequently Asked Questions</h1>
+
+      <button onclick="toggleVisibility('faq-section')" style="display: block;
+      margin-left:193px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 20px;">Toggle FAQ</button>
+
+      <div id="faq-section" class="content-section" style="display: none;margin-left:193px;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 20px;"">
+        <h2>Frequently Asked Questions</h2>
+        <p>How long does it take to learn JavaScript?</p>
+        <p>What programming language should I learn first?</p>
+        <p>What is the best way to learn coding?</p>
+
+      </div>
+
+      <button id="dark-button" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+      </button>
+
       <!--FOOTER-->
       <footer class="bg-dark text-white text-center py-3">
         <div class="container">
@@ -309,5 +364,11 @@
       </footer>
 
       <script type="text/javascript" src="script.js"></script>
+      <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+        </script>
 </body>
 </html>

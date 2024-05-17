@@ -245,3 +245,30 @@ tr:nth-child(even) {
     cursor: pointer;
     margin-top: 20px;
 }
+.content-section {
+    display: none;
+    margin-left: 193px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#dark-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: fixed;
+    left: 20px; 
+    top: 20px; 
+    background-color: #000;
+    color: white;
+}
+
+.dark-mode{
+    background-color: #252729;
+    color: darkolivegreen; 
+}
