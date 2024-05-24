@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Create A Plate",
+      "duration": "3 months",
+      "plu": "JavaScript",
+      "level": "Intermediate",
+      "description": "Introducing CreateAPlate the innovative app that empowers you to be the chef of your dining experience! With CreateAPlate, you have the freedom to design your own delectable dishes when dining out at your favorite restaurants."
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "duration": "6 months",
+      "plu": "Python",
+      "level": "Advanced",
+      "description": "Description of Project 2"
+    },
+
+    {
+        "id": 3,
+        "name": "Project 3",
+        "duration": "6 months",
+        "plu": "Python",
+        "level": "Advanced",
+        "description": "Description of Project 3"
+      }
+  ]

@@ -89,7 +89,7 @@ let request = fetch("https://663e7a10e1913c476797c09f.mockapi.io/api/clients")
 
       let actionCell = row.insertCell(4);
       let hideButton = document.createElement("button");
-      hideButton.textContent = "Hide";
+      hideButton.textContent = "Delete";
       hideButton.className = "hide-button";
       hideButton.addEventListener("click", function () {
         row.style.display = "none";
@@ -133,3 +133,5 @@ function changeButtonStyle(button) {
     button.style.backgroundColor = "black";
   }
 }
+
+

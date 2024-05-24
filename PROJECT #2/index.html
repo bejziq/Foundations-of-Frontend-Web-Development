@@ -188,7 +188,7 @@
                 <div class="col-md-6">
                   <h2>Project 1 Description</h2>
                   <p>This is the description for Project 1. It involves creating a new logo for a company and designing their branding materials.</p>
-                  <a href="html/project1.html" class="btn btn-primary" target="_blank">View More</a>
+                  <a href="project1.html" class="btn btn-primary" target="_blank">View More</a>
                 </div>
               </div>
             </div>
@@ -208,7 +208,7 @@
                 <div class="col-md-6">
                   <h2>Project 2 Description</h2>
                   <p>This is the description for Project 2. It involves developing a web application for managing inventory and sales.</p>
-                  <a href="html/project2.html" class="btn btn-primary" target="_blank">View More</a>
+                  <a href="project2.html" class="btn btn-primary" target="_blank">View More</a>
                 </div>
               </div>
             </div>
@@ -228,9 +228,9 @@
                 <div class="col-md-6">
                   <h2>Project 3 Description</h2>
                   <p>This is the description for Project 3. It involves designing and implementing a mobile application for task management.</p>
-                  <a href="html/project3.html" class="btn btn-primary" target="_blank">View More</a>
+                  <a href="project3.html" class="btn btn-primary" target="_blank">View More</a>
                 </div>
-              </div>
+              </div>  
             </div>
           </div>
         </div>
@@ -288,9 +288,10 @@
 
 
       <main id="spapp" role="main">
-        <section id="project-1" data-load="project1.html"></section>
-        <section id="project-1" data-load="project1.html"></section>
-        <section id="project-1" data-load="project1.html"></section>
+        <section id="abt" data-load="#about"></section>
+        <section id="exp" data-load="#experience"></section>
+        <section id="prj" data-load="#projects"></section>
+        <section id="contact" data-load="#contact"></section>
       </main>
 
 
@@ -364,11 +365,13 @@
       </footer>
 
       <script type="text/javascript" src="script.js"></script>
+      <script type="text/javascript" src="custom.js"></script>
+
       <script>
         function toggleDarkMode() {
             var body = document.body;
             body.classList.toggle("dark-mode");
         }
-        </script>
+      </script>
 </body>
 </html>
