@@ -1,9 +1,16 @@
 function Products(){
     return(
-        <>
-        <h2>Products Page</h2>
-        </>
-    );
+        <div>
+        <h1>BLOGS</h1>
+
+        <section>
+            <div id="blogs">
+                <p>AI BLOG</p>
+            </div>
+        </section>
+
+        </div>
+    );  
 }
 
 export default Products;
